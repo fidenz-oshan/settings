@@ -1,0 +1,2 @@
+class SettingsScope < ApplicationRecord
+end
