@@ -1,0 +1,3 @@
+module Settings
+  # Your code goes here...
+end
