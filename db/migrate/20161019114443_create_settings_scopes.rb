@@ -1,4 +1,4 @@
-class CreateSettingsScopes < ActiveRecord::Migration[5.0]
+class CreateSettingsScopes < ActiveRecord::Migration
   def change
     create_table :settings_scopes do |t|
       t.string :title
