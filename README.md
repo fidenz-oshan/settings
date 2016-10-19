@@ -23,10 +23,3 @@ $ gem install settings
 
 ## Contributing
 Contribution directions go here.
-
-## License
-The gem is available as open source under the terms of the [GPL v3 License]
-
-# settings
-Rails Application Settings Handler, Active Admin Support
-
