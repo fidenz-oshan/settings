@@ -8,18 +8,11 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'settings'
+gem 'settings', github: 'fidenz-oshan/settings'
 ```
 
 And then execute:
 ```bash
 $ bundle
+$ rake railties:install:migrations
 ```
-
-Or install it yourself as:
-```bash
-$ gem install settings
-```
-
-## Contributing
-Contribution directions go here.
