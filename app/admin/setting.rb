@@ -2,7 +2,7 @@ ActiveAdmin.register Settings::Scope, as: 'Setting' do
   # menu false
   actions :all, except: [:new, :destroy]
 
-  permit_params settings_attributes: [:id, :value]
+  permit_params :id, settings_attributes: [:id, :value, :order_id]
 
   form do |f|
     f.inputs resource.title do
