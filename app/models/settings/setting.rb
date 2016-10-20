@@ -5,6 +5,6 @@ module Settings
     validates :slug, uniqueness: true
 
     enum data_type: [:f, :int, :boolean, :email, :rich_file]
-    enum input_type: [:input, :select, :radio, :checkbox, :file, :image, :audio, :video]
+    enum input_type: [:input, :dropdown, :radio, :checkbox, :file, :image, :audio, :video]
   end
 end

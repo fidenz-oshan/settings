@@ -2,10 +2,10 @@ ActiveAdmin.register Settings::Scope, as: 'Setting' do
   # menu false
   actions :all, except: [:new, :destroy]
 
-  permit_params :name, option_attributes: [:id, :value]
+  permit_params settings_attributes: [:id, :value]
 
   form do |f|
-    f.inputs resource.name do
+    f.inputs resource.title do
       f.has_many :settings, new_record: false, heading: false, sortable: :order_id do |option|
         case option.object.input_type
         when 'input'
