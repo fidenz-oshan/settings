@@ -1,5 +1,5 @@
-ActiveAdmin.register SettingsScope as 'Setting' do
-  menu false
+ActiveAdmin.register Settings::Scope as 'Setting' do
+  # menu false
   actions :all, except: [:new, :destroy]
 
   permit_params :name, option_attributes: [:id, :value]
