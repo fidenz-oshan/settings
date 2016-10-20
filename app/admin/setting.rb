@@ -1,4 +1,4 @@
-ActiveAdmin.register Settings::Scope as 'Setting' do
+ActiveAdmin.register Settings::Scope, as: 'Setting' do
   # menu false
   actions :all, except: [:new, :destroy]
 
