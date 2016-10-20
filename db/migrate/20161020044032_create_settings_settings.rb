@@ -3,7 +3,6 @@ class CreateSettingsSettings < ActiveRecord::Migration
     create_table :settings_settings do |t|
       t.timestamps null: false
       t.belongs_to :settings_scope, foreign_key: true
-      t.integer :scope
       t.string :slug
       t.string :title
       t.string :value
