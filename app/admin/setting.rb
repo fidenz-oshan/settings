@@ -8,14 +8,18 @@ ActiveAdmin.register Settings::Scope, as: 'Setting' do
     f.inputs resource.title do
       f.has_many :settings, new_record: false, heading: false, sortable: :order_id do |option|
         case option.object.input_type
+        when 'video'
+          option.input :value, label: option.object.title, as: :rich_picker, config: {
+            style: 'width: 400px !important;', type: 'video'
+          }
         when 'input'
-          return option.input :value, label: option.object.key
-        when 'select'
-          return option.input :value, label: option.object.key, as: :select2, collection: option.object.input_values.split(',').map { |e| [e.to_s, e.to_s] }
+          option.input :value, label: option.object.title
+        when 'dropdown'
+          option.input :value, label: option.object.title, as: :select2, collection: option.object.input_values.split(',').map { |e| [e.to_s, e.to_s] }
         when 'radio'
-          return option.input :value, label: option.object.key, as: :radio
+          option.input :value, label: option.object.title, as: :radio
         when 'checkbox'
-          return option.input :value, label: option.object.key, as: :check_boxes, collection: option.object.input_values.split(',').map { |e| [e.to_s, e.to_s] }
+          option.input :value, label: option.object.title, as: :check_boxes, collection: option.object.input_values.split(',').map { |e| [e.to_s, e.to_s] }
         end
         option.semantic_errors
       end
