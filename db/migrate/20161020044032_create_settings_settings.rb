@@ -1,6 +1,6 @@
-class CreateSettings < ActiveRecord::Migration
+class CreateSettingsSettings < ActiveRecord::Migration
   def change
-    create_table :settings do |t|
+    create_table :settings_settings do |t|
       t.timestamps null: false
       t.belongs_to :settings_scope, foreign_key: true
       t.integer :scope
