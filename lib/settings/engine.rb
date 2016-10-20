@@ -3,7 +3,7 @@ module Settings
     isolate_namespace Settings
 
     initializer :settings do
-      ActiveAdmin.application.load_paths += Dir[File.dirname(__FILE__) + '../../app/admin']
+      ActiveAdmin.application.load_paths += Dir[File.dirname(__FILE__) + '/../../app/admin']
     end
 
     initializer 'settings', before: :load_config_initializers do |_app|
