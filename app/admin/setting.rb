@@ -26,4 +26,16 @@ ActiveAdmin.register Settings::Scope, as: 'Setting' do
     end
     f.actions
   end
+
+  controller do
+    def update
+      params[:scope][:settings_attributes].each do |_key, setting|
+        stng = Settings::Setting.find(setting[:id])
+        stng.order_id = setting[:order_id]
+        stng.value = setting[:value]
+        stng.save!
+      end
+      super
+    end
+  end
 end
