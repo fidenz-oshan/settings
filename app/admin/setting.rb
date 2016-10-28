@@ -1,5 +1,5 @@
 ActiveAdmin.register Settings::Scope, as: 'Setting' do
-  # menu false
+  menu false
   actions :all, except: [:new, :destroy]
 
   permit_params :id, settings_attributes: [:id, :value, :order_id]
