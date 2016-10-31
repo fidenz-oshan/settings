@@ -20,6 +20,8 @@ ActiveAdmin.register Settings::Scope, as: 'Setting' do
           setting_f.input :value, label: setting_f.object.title, as: :radio
         when 'checkbox'
           setting_f.input :value, label: setting_f.object.title, as: :check_boxes, collection: setting_f.object.input_values.split(',').map { |e| [e.to_s, e.to_s] }
+        when 'number'
+          setting_f.input :value, label: setting_f.object.title, as: :number
         end
         setting_f.semantic_errors
       end
